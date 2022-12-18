@@ -1,0 +1,3 @@
+--- #install tree task using role tree
+- name: install tree
+  action: yum pkg=tree state=present

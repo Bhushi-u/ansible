@@ -1,0 +1,18 @@
+--- #multiple host i.e. each host perform different task
+- hosts: devlinux[0]
+  user: ansible
+  become: yes
+  gather_facts: yes
+  connection: ssh
+  tasks: 
+    - name: install tree
+      action: yum pkg=tree state=present
+
+- hosts: qalinux[0]
+  user: ansible
+  become: yes
+  gather_facts: yes
+  connection: ssh
+  tasks:
+    - name: install git
+      action: yum pkg=git state=present

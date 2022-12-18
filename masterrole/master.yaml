@@ -1,0 +1,9 @@
+--- #File for master yaml which contain main host and  role information
+- hosts: devlinux
+  user: ansible
+  become: yes
+  connection: ssh
+  gather_facts: yes
+  roles:
+    - mainrole
+    - tree

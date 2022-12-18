@@ -1,0 +1,3 @@
+#alll handlers are here
+- name: start apache
+  action: service name="{{pkgname}}" state="started"

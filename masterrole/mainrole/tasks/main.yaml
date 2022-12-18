@@ -1,0 +1,8 @@
+# define all tasks
+- name: install apache
+  action: yum pkg="{{pkgname}}" state="present"
+  notify: start apache
+
+- name: deploy apache
+  action: copy src=index.html  dest="{{index_path}}"
+  when: value == 10

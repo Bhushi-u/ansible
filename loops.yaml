@@ -1,0 +1,15 @@
+--- #loops yaml practical
+- hosts: devlinux
+  user: ansible
+  become: yes
+  gather_facts: yes
+  connection: ssh
+
+  tasks:
+  - name: print task
+    command: echo "{{item}}"
+    loop:
+      - "one"
+      - "two"
+      - "three"
+      - "four"

@@ -1,0 +1,5 @@
+#define all variable are here
+ pkgname: httpd
+ index_path: /var/www/html
+ value: 10
+

@@ -1,0 +1,6 @@
+--- #my 1st yaml playbook
+- hosts: devlinux[0], qalinux[0]
+  name: ansible
+  become: yes
+  gather_facts: yes
+  connection: ssh

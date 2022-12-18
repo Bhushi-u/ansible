@@ -1,0 +1,14 @@
+--- #user loop yaml 
+- hosts: devlinux
+  user: ansible
+  become: yes
+  gather_facts: yes
+  connection: ssh
+
+  tasks:
+  - name: create user
+    user: name="{{item}}" state="present"
+    loop:
+      - "shivani"
+      - "montu"
+      - "bhushan"
